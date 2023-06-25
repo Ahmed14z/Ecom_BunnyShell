@@ -8,7 +8,7 @@ from os import environ
 import os
 from uuid import uuid4
 from werkzeug.utils import secure_filename
-import requests
+
 
 app = Flask(__name__)
 
