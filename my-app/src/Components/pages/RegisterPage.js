@@ -13,7 +13,7 @@ export default function RegisterPage() {
 
   const registerUser = () => {
     axios
-      .post("http://${process.env.BACKEND_HOST}:8000/signup", {
+      .post("https://${process.env.BACKEND_HOST}:8000/signup", {
         email: email,
         password: password,
       })
