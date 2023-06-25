@@ -10,10 +10,11 @@ export default function RegisterPage() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { updateUser } = useContext(UserContext);
+  const backendHost = process.env.BACKEND_HOST;
 
   const registerUser = () => {
     axios
-      .post("https://${process.env.BACKEND_HOST}:8000/signup", {
+      .post(`http://${backendHost}:8000/signup`, {
         email: email,
         password: password,
       })
