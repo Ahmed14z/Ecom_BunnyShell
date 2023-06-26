@@ -30,7 +30,7 @@ export default function RegisterPage() {
           alert("User already exists!"); // Display a notification
         } else {
           console.log(error, "error");
-          console.log(`${REACT_APP_BACKEND_HOST}`);
+          console.log(`${process.env.REACT_APP_BACKEND_HOST}`);
 
           alert("Registration failed. Please try again."); // Display a general error message
         }
