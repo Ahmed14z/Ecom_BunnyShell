@@ -14,9 +14,7 @@ export default function RegisterPage() {
   const registerUser = () => {
     axios
       .post(
-        `http://${
-          components.flask - app.ingress.hosts[0].hostname
-        }:8000/signup`,
+        `http://flask-app:8000/signup`,
         {
           email: email,
           password: password,
