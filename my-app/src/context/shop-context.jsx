@@ -39,7 +39,7 @@ export const ShopContextProvider = (props) => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          `http://${process.env.REACT_APP_BACKEND_HOST}/products`
+          `https://${process.env.REACT_APP_BACKEND_HOST}/products`
         );
         const data = response.data;
         setProducts(data);
@@ -88,7 +88,7 @@ export const ShopContextProvider = (props) => {
   const updateCartItemCount = async (newQuantity, productId) => {
     try {
       const response = await axios.post(
-        `http://${process.env.REACT_APP_BACKEND_HOST}/cart/${userId}/update`,
+        `https://${process.env.REACT_APP_BACKEND_HOST}/cart/${userId}/update`,
         {
           newQuantity: newQuantity,
           productId: productId,
